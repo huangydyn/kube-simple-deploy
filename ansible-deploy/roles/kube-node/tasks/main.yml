@@ -1,0 +1,10 @@
+---
+- name: install kubelet
+  shell: ./kubelet.sh
+  args:
+    chdir: /vagrant/kube-without-ca/node
+
+- name: install kube-proxy
+  shell: ./proxy.sh
+  args:
+    chdir: /vagrant/kube-without-ca/node

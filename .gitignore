@@ -1,0 +1,16 @@
+.DS_Store
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+kube-controller-manager
+kubectl
+kube-apiserver
+kube-scheduler
+etcd
+etcdctl
+flanneld
+kubelet
+kube-proxy

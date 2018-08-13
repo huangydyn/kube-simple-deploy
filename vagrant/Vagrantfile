@@ -1,0 +1,11 @@
+VAGRANTFILE_API_VERSION = "2"    #定义版本
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|  #使用内部2版本
+  (1..2).each do |i|
+    config.vm.define "node-#{i}" do |node|
+        node.vm.box = "ubuntu/xenial64"            
+        node.vm.host_name = "node-#{i}"
+        node.vm.network :private_network, ip: "192.168.0.#{i+10}"     
+	node.vm.provision :shell, :path => "install.sh"
+    end
+  end
+end

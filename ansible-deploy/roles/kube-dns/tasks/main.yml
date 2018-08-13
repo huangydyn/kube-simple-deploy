@@ -1,0 +1,5 @@
+---
+- name: install kube dns
+  shell: kubectl create -f kube-dns.yml
+  args:
+    chdir: /vagrant/kube-without-ca/kube-dns

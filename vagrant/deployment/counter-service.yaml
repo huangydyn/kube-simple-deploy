@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: counter
+  labels:
+      type: backend
+spec:
+  selector:
+    app: counter
+  type: NodePort
+  ports:
+  - protocol: TCP
+    port: 8080
+    nodePort: 31002

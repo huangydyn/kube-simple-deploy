@@ -1,0 +1,20 @@
+---
+- name: install apiserver
+  shell: ./apiserver.sh
+  args:
+    chdir: /vagrant/kube-without-ca/master
+
+- name: install scheduler
+  shell: ./scheduler.sh
+  args:
+    chdir: /vagrant/kube-without-ca/master
+
+- name: install controller-manager
+  shell: ./controller-manager.sh
+  args:
+    chdir: /vagrant/kube-without-ca/master
+
+- name: install kubelet
+  shell: ./install_kubectl.sh
+  args:
+    chdir: /vagrant/kube-without-ca/master

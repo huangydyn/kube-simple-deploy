@@ -1,0 +1,10 @@
+---
+- name: install flanneld
+  shell: ./flannel.sh
+  args:
+    chdir: /vagrant/kube-without-ca/node
+
+- name: install docker
+  shell: ./docker.sh
+  args:
+    chdir: /vagrant/kube-without-ca/node

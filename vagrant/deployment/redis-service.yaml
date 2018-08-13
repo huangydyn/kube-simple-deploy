@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: redis-master
+  labels:
+      type: db
+spec:
+  selector:
+    app: redis
+  ports:
+  - protocol: TCP
+    port: 6378
+    targetPort: 6379
